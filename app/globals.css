@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@theme {
+  --font-Delight-Thin: "Delight-Thin", sans-serif;
+  --font-Delight-Light: "Delight-Light", sans-serif;
+  --font-Delight-Medium: "Delight-Medium", sans-serif;
+  --font-Delight: "Delight-Regular", sans-serif;
+  --font-DelightBold: "Delight-Bold", sans-serif;
+  --font-Delight-ExtraBold: "Delight-ExtraBold", sans-serif;
+  --font-DelightBlack: "Delight-Black", sans-serif;
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  html {
+    background-color: black;
+  }
+  .heroSection {
+    background-image: url("../public/images/backgroundImage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    inset: 0;
+  }
+  .serviceItem {
+    background-image: url("../public/images/squared-paper-texture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    inset: 0;
+  }
+  .footer div {
+    background-image: url("../public/images/squared-paper-texture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    inset: 0;
+  }
+}
+
+@layer utilities {
+  .header {
+    @apply fixed top-4 grid grid-cols-3 gap-2 justify-center items-center p-4 rounded-full bg-[#292626] text-white font-Delight;
+  }
+}
