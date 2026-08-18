@@ -4,12 +4,14 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
+import EsgisLogo from "@/public/Icons/logo-red.png";
+import image from "@/public/image.jpeg";
 
 export default function AboutPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Petite animation d'entrée fluide pour la page
+    // Animation d'entrée fluide pour la page
     const ctx = gsap.context(() => {
       gsap.from(".animate-in", {
         y: 40,
@@ -26,15 +28,16 @@ export default function AboutPage() {
   return (
     <main
       ref={containerRef}
-      className="min-h-screen bg-[#F5F5F5] text-black font-nohemi-regular relative flex flex-col justify-between overflow-hidden"
+      // Remplacement de overflow-hidden par overflow-x-hidden pour permettre le scroll sticky
+      className="min-h-screen bg-[#F5F5F5] text-black font-nohemi-regular relative flex flex-col justify-between overflow-x-hidden"
     >
       {/* Contenu principal */}
       <div className="px-6 md:px-12 pt-12">
         {/* Bouton Retour */}
-        <div className="animate-in mb-24">
+        <div className="animate-in mb-12 md:mb-24">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 p-4 px-6 bg-black text-white transition-colors rounded-full text-[1rem] font-medium"
+            className="inline-flex items-center gap-2 p-4 px-6 bg-black text-white hover:bg-gray-800 transition-colors rounded-full text-[1rem] font-medium"
           >
             <svg
               width="16"
@@ -53,29 +56,79 @@ export default function AboutPage() {
         </div>
 
         {/* Grille Texte & Image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center max-w-7xl mx-auto">
-          {/* Colonne Texte */}
-          <div className="animate-in flex flex-col justify-center max-w-md">
-            <h2 className="text-[3rem] mb-6">Salut 👋</h2>
-            <p className="text-[#666666] leading-relaxed text-[1.25rem]">
-              Lorem ipsum dolor sit amet consectetur. Nunc et consectetur diam
-              pulvinar {/* Le soulignement rouge ondulé pour esgis */}
-              <span className="text-black underline decoration-red-500 decoration-wavy decoration-2 underline-offset-4">
-                esgis
-              </span>
-              . At tincidunt nulla placerat felis a purus. Lobortis enim
-              facilisis morbi et sagittis sed non turpis. Nec congue id turpis
-              elementum arcu.
-            </p>
+        <div className="grid grid-cols-1 gap-12 lg:gap-24 items-start w-full mx-auto relative">
+          {/* COLONNE TEXTE : Formations & Education */}
+          {/* order-2 sur mobile (en bas), md:order-1 sur PC (à gauche) */}
+          <div className="animate-in space-y-16 md:space-y-20 flex flex-col justify-between items-start w-full h-full order-2 md:order-1">
+            {/* Section Formations */}
+            <div className="w-full">
+              <h3 className="text-[3rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
+                Formations
+              </h3>
+              <div className="flex flex-col md:flex-row gap-2 md:gap-16 pt-4 mb-5">
+                <div className="md:w-1/3 shrink-0">
+                  <span className="text-[1.4rem] md:text-[1.8rem] font-extrabold block">
+                    2024 à Aujourd&apos;hui
+                  </span>
+                </div>
+                <div className="md:w-2/3 space-y-3">
+                  <h4 className="text-[1.4rem] md:text-[1.8rem] font-bold">
+                    Licence Professionnelle en Génie Logiciel
+                  </h4>
+                  <p className="text-gray-700 text-[1.2rem] md:text-[1.5rem] leading-relaxed">
+                    en cours à l&apos;
+                    <span className="inline-block">
+                      <a
+                        href="https://www.esgis.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src={EsgisLogo}
+                          alt="Logo de l'ESGIS"
+                          width={70}
+                          height={45}
+                          className="inline-block wauto h-auto"
+                        />
+                      </a>
+                    </span>
+                    . Étude approfondie de l&apos;architecture logicielle, de la
+                    sécurité informatique, de la modélisation de données
+                    complexes et du développement back-end avec Java (Spring
+                    Boot) et Python (Django).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Section Education */}
+            <div className="w-full">
+              <h3 className="text-[3rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
+                Éducation
+              </h3>
+              <div className="flex flex-col md:flex-row gap-2 md:gap-16 pt-4">
+                <div className="md:w-1/3 shrink-0">
+                  <span className="text-[1.4rem] md:text-[1.8rem] font-extrabold block">
+                    2021
+                  </span>
+                </div>
+                <div className="md:w-2/3 space-y-3">
+                  <h4 className="text-[1.4rem] md:text-[1.8rem] font-bold">
+                    BAC 2 Série D au LY-AGO (Lycée Agoè-Nyivé)
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Colonne Image */}
-          <div className="animate-in w-full flex justify-end">
-            <div className="relative w-full max-w-[400px] aspect-square rounded-sm overflow-hidden bg-gray-200">
-              {/* Remplace le src par le chemin de ta vraie image ou laisse le Patrick Star */}
+          {/* COLONNE IMAGE */}
+          {/* order-1 sur mobile (en haut), md:order-2 sur PC (à droite) */}
+          {/* md:sticky md:top-32 permet à l'image de suivre le scroll sur PC. h-max est requis pour le sticky dans une grille */}
+          <div className="animate-in w-full hidden h-full flex justify-center md:justify-end md:sticky md:top-32 self-start order-1 md:order-2">
+            <div className="relative w-full aspect-square rounded-sm overflow-hidden bg-gray-200">
               <Image
-                src="/patrick-star.jpg"
-                alt="Portrait"
+                src={image}
+                alt="Portrait d'antoine KONKA"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 400px"
@@ -86,9 +139,10 @@ export default function AboutPage() {
       </div>
 
       {/* Typographie Géante en bas */}
-      <div className="animate-in w-full flex justify-center items-end px-6 pb-6 mt-20">
+      <div className="animate-in w-full flex justify-center items-end px-4 md:px-6 pb-6 mt-16 md:mt-20">
         <h1 className="text-[13vw] leading-[0.8] tracking-tighter text-black whitespace-nowrap">
-          antoine Samuel <span className="text-[4vw] align-top">©</span>
+          antoine Samuel{" "}
+          <span className="text-[5vw] md:text-[4vw] align-top">©</span>
         </h1>
       </div>
     </main>

@@ -94,12 +94,12 @@ export function ServicesSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 px-6 md:px-12 w-full relative mx-auto bg-black font-nohemi-regular"
+      className="p-24 md:p-12 min-h-screen w-full relative mx-auto bg-black font-nohemi-regular"
     >
       {/* Titre principal */}
       <h2
         ref={h2Ref}
-        className="text-[5rem] tracking-tight max-w-4xl mb-16 leading-tight text-white"
+        className="text-[4.5rem] tracking-tight max-w-4xl mb-16 leading-tight text-white"
       >
         My Job ? Understand, Analyse and design aesthetic, and acessibles
         solutions to my clients

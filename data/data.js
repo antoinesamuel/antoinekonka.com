@@ -1,0 +1,25 @@
+export const WebProjects = [{
+        id: 1,
+        name: "My Portfolio",
+        description: "Un portfolio simple et efficace pour ameliorer mes competences en UI/UX Design et en Next js",
+        GithubLink: "",
+        RealLink: "",
+        FigmaTemplateLink: "https://www.figma.com/design/KVIuG8dHT88yIs9A8jiR9K/antoine-KONKA?node-id=93-3&t=64KUuEy4IU3YoTUu-1",
+    },
+    {
+        id: 2,
+        name: "Eliazar Portfolio",
+        description: "Redisign complet du Portfolio d'un ami",
+        GithubLink: "",
+        RealLink: "https://eliazar-portfolio-two.vercel.app/",
+        FigmaTemplateLink: "https://www.figma.com/design/l7KHurlbz2yKcwj7cd4IM7/LayebeEliazar?node-id=1-3&t=9mMsu2iqg0bdQCYM-1",
+    },
+    {
+        id: 3,
+        name: "xyz",
+        description: "Une application integrant un Raccoursisseur de Lien et un Generateur de QRcode",
+        GithubLink: "https://github.com/antoinesamuel/xyz",
+        RealLink: "",
+        FigmaTemplateLink: "",
+    },
+];

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import StaggeredMenu from "./StaggeredMenu";
+import TransitionLink from "./TransitionLink";
 
 interface HeaderProps {
   logoSrc?: string | { src: string };
@@ -13,16 +14,16 @@ export default function Header({ logoSrc }: HeaderProps) {
 
   // Éléments de navigation pour le Staggered Menu (Mobile/Tablette)
   const menuItems = [
-    { label: "About", ariaLabel: "Aller à la section About", link: "#about" },
+    { label: "About", ariaLabel: "Aller à la section About", link: "/About" },
     {
       label: "Projets",
       ariaLabel: "Aller à la section Projets",
-      link: "#projets",
+      link: "/Projects",
     },
     {
       label: "Contacts",
       ariaLabel: "Aller à la section Contacts",
-      link: "#contacts",
+      link: "#Contacts",
     },
   ];
 
@@ -47,24 +48,24 @@ export default function Header({ logoSrc }: HeaderProps) {
 
         {/* Navigation Desktop en pilule avec effet Glass prononcé */}
         <nav className="flex items-center space-x-1 px-6 py-4 rounded-full border border-white/15 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
-          <Link
+          <TransitionLink
             href="/About"
             className="px-5 py-2 text-white/80 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
           >
             About
-          </Link>
-          <Link
-            href="/Projets"
+          </TransitionLink>
+          <TransitionLink
+            href="/Projects"
             className="px-5 py-2 text-white/80 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
           >
-            Projets
-          </Link>
-          <Link
-            href="/Contacts"
+            Projects
+          </TransitionLink>
+          <a
+            href="#Contacts"
             className="px-5 py-2 text-white/80 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
           >
             Contacts
-          </Link>
+          </a>
         </nav>
       </header>
 

@@ -1,6 +1,8 @@
+import { FixedRotateText } from "../_Components/FixedRotateText";
 export default function HomePage() {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-black">
+    <div className="h-screen w-full flex justify-center items-center bg-black relative">
+      <FixedRotateText />
       {/* Contenu textuel central inspiré de ton design Figma */}
       <div className="absolute z-10 text-center pointer-events-none select-none flex flex-col items-center gap-4">
         <h1 className="text-white font-bold text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tight leading-none">
