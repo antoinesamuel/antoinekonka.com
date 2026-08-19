@@ -46,36 +46,29 @@ export default function ContactSection({ avatarSrc }: ContactSectionProps) {
       className="w-full p-8 text-black bg-white py-24 px-6 md:px-16 flex flex-col justify-between relative overflow-hidden"
     >
       {/* Top Row: Avatar, Bouton Scroll-Top, Réseaux Sociaux */}
-      <div className="w-full mx-auto flex justify-between items-center gap-6 mb-16">
+      <div className="w-full grid grid-cols-2 gap-6 place-items-center mb-16 relative z-20">
         {/* Avatar en haut à gauche */}
-        <div className="w-20 h-20 rounded-full overflow-hidden">
-          {Philippos ? (
-            <Image
-              src={Philippos}
-              alt="Avatar"
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <div className="w-full h-full bg-white/10" />
-          )}
+        <div className="w-full h-full flex justify-start">
+          <div className="w-20 h-20 rounded-full overflow-hidden flex place-self-start">
+            {Philippos ? (
+              <Image
+                src={Philippos}
+                alt="Avatar"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-white/10" />
+            )}
+          </div>
         </div>
-
         {/* Actions : Bouton de remontée + Réseaux sociaux */}
-        <div className="flex items-center gap-4">
-          {/* Bouton pour remonter en haut */}
-          <button
-            onClick={scrollToTop}
-            className="w-12 h-12 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white/10 transition-all text-white active:scale-95"
-            aria-label="Retour en haut"
-          >
-            <ArrowUp size={20} />
-          </button>
 
-          {/* Pillule des réseaux sociaux (Gmail, LinkedIn, GitHub) */}
-          <div className="grid grid-cols-3 items-center gap-3 px-6 py-3 rounded-full">
+        {/* Pillule des réseaux sociaux (Gmail, LinkedIn, GitHub) */}
+        <div className="w-full flex justify-end">
+          <div className="grid grid-cols-3 gap-2 md:gap-3 px-6 py-3 rounded-full">
             <a
               href="mailto:contact@konkakokou@outlook.com"
-              className="w-18 h-18 rounded-full flex items-center justify-center bg-[whitesmoke] transition-colors"
+              className="w-18 h-18 rounded-full flex items-center justify-center bg-[whitesmoke] transition-colors hover:cursor-pointer"
               aria-label="Email"
             >
               <Mail size={18} />
@@ -105,7 +98,6 @@ export default function ContactSection({ avatarSrc }: ContactSectionProps) {
           </div>
         </div>
       </div>
-
       {/* Bannière / Carte de localisation */}
       <div className="w-full mx-auto my-auto rounded-3xl overflow-hidden relative h-120 flex items-center justify-center">
         <iframe
@@ -124,6 +116,24 @@ export default function ContactSection({ avatarSrc }: ContactSectionProps) {
           antoine Samuel <span className="text-[4vw] align-top">©</span>
         </h1>
       </div>
+      {/* Bouton pour remonter en haut */}
+      <button
+        onClick={scrollToTop}
+        className="w-12 h-12 rounded-full border border-black backdrop-blur-md flex items-center justify-center hover:bg-white/10 transition-all text-white active:scale-95 mx-auto z-100"
+        aria-label="Retour en haut"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#000000"
+          strokeWidth="1"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="rotate-90 h-10 w-10"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+      </button>
     </section>
   );
 }

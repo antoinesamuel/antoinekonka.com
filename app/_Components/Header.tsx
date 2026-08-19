@@ -37,8 +37,8 @@ export default function Header({ logoSrc }: HeaderProps) {
             <Image
               src={resolvedLogoSrc}
               alt="Antoine Konka Logo"
-              width={20}
-              height={20}
+              width={32}
+              height={32}
               className="w-full h-full object-cover"
             />
           ) : (

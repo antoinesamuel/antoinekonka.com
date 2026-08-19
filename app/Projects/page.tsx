@@ -1,9 +1,36 @@
 import Link from "next/link";
 import { ProjectCard } from "../_Components/ProjetCard";
 import { WebProjects } from "@/data/data";
+import Background from "../Pages/Background";
+//
+//Import de nos icons
+import BugsBunny from "@/public/Icons/BuckBunny.svg";
+import CoolBob from "@/public/Icons/CoolBob.svg";
+import CoolGuy from "@/public/Icons/CoolGuy.svg";
+import DuffyDuck from "@/public/Icons/DuffyDuck.svg";
+import GangBob from "@/public/Icons/GangBob.svg";
+import Philippos from "@/public/Icons/philipposBrother.svg";
+import philipposBrother from "@/public/Icons/philipposBrother.svg";
+import Stewie from "@/public/Icons/Stewie.svg";
+import TortueGeniale from "@/public/Icons/TortueGeniale.svg";
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col justify-center gap-5 items-center p-12">
+    <div className="min-h-screen flex flex-col justify-center gap-5 items-center p-12 z-10 relative">
+      {/** 
+      <Background
+        images={[
+          BugsBunny,
+          CoolBob,
+          DuffyDuck,
+          GangBob,
+          Philippos,
+          philipposBrother,
+          Stewie,
+          TortueGeniale,
+          CoolGuy,
+        ]}
+      />
+      */}
       {/* Bouton Retour */}
       <div className="animate-in mb-24">
         <Link

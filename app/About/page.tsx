@@ -6,6 +6,18 @@ import Link from "next/link";
 import gsap from "gsap";
 import EsgisLogo from "@/public/Icons/logo-red.png";
 import image from "@/public/image.jpeg";
+import Background from "../Pages/Background";
+//
+//Import de nos icons
+import BugsBunny from "@/public/Icons/BuckBunny.svg";
+import CoolBob from "@/public/Icons/CoolBob.svg";
+import CoolGuy from "@/public/Icons/CoolGuy.svg";
+import DuffyDuck from "@/public/Icons/DuffyDuck.svg";
+import GangBob from "@/public/Icons/GangBob.svg";
+import Philippos from "@/public/Icons/philipposBrother.svg";
+import philipposBrother from "@/public/Icons/philipposBrother.svg";
+import Stewie from "@/public/Icons/Stewie.svg";
+import TortueGeniale from "@/public/Icons/TortueGeniale.svg";
 
 export default function AboutPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,8 +41,23 @@ export default function AboutPage() {
     <main
       ref={containerRef}
       // Remplacement de overflow-hidden par overflow-x-hidden pour permettre le scroll sticky
-      className="min-h-screen bg-[#F5F5F5] text-black font-nohemi-regular relative flex flex-col justify-between overflow-x-hidden"
+      className="min-h-screen text-black font-nohemi-regular z-10 relative flex flex-col justify-between overflow-x-hidden"
     >
+      {/** 
+      <Background
+        images={[
+          BugsBunny,
+          CoolBob,
+          DuffyDuck,
+          GangBob,
+          Philippos,
+          philipposBrother,
+          Stewie,
+          TortueGeniale,
+          CoolGuy,
+        ]}
+      />
+      */}
       {/* Contenu principal */}
       <div className="px-6 md:px-12 pt-12">
         {/* Bouton Retour */}

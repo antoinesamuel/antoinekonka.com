@@ -101,8 +101,8 @@ export function ServicesSection() {
         ref={h2Ref}
         className="text-[4.5rem] tracking-tight max-w-4xl mb-16 leading-tight text-white"
       >
-        My Job ? Understand, Analyse and design aesthetic, and acessibles
-        solutions to my clients
+        My Job ? Understand, Analyse, design aesthetic, and acessibles solutions
+        to my clients
       </h2>
 
       {/* Sous-titre */}
