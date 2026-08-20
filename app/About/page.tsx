@@ -102,7 +102,7 @@ export default function AboutPage() {
                   <h4 className="text-[1.4rem] md:text-[1.8rem] font-bold">
                     Licence Professionnelle en Génie Logiciel
                   </h4>
-                  <p className="text-gray-700 text-[1.2rem] md:text-[1.5rem] leading-relaxed">
+                  <p className=" text-[1.2rem] md:text-[1.5rem] leading-relaxed text-black">
                     en cours à l&apos;
                     <span className="inline-block">
                       <a
@@ -115,7 +115,7 @@ export default function AboutPage() {
                           alt="Logo de l'ESGIS"
                           width={70}
                           height={45}
-                          className="inline-block wauto h-auto"
+                          className="inline-block w-auto h-auto"
                         />
                       </a>
                     </span>

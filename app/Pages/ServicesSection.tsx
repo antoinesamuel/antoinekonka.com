@@ -19,20 +19,46 @@ export function ServicesSection() {
     {
       id: 1,
       title: "Web App",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur. Tortor felis ipsum senectus etiam venenatis duis leo quam felis. Quisque ornare nunc duis volutpat. maecenas sollicitudin iaculis ut. Felis id fringilla ullamcorper interdum.",
+      description: (
+        <ul className="list text-[2rem] list-item">
+          <li className="list-item">Analyse avec UML</li>
+          <li className="list-item">Web Animation</li>
+          <li className="list-item">Front-End Dev</li>
+          <li className="list-item">Backend-Dev</li>
+        </ul>
+      ),
     },
     {
       id: 2,
       title: "Graphic & UI/UX Design",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur. Tortor felis ipsum senectus etiam venenatis duis leo quam felis. Quisque ornare nunc duis volutpat. maecenas sollicitudin iaculis ut. Felis id fringilla ullamcorper interdum.",
+      description: (
+        <ul className="list text-[2rem] list-disc">
+          <li className="list-item">Brand Design</li>
+          <li className="list-item">Logo Design</li>
+          <li className="list-item">Logo Design</li>
+          <li className="list-item">UI Design</li>
+        </ul>
+      ),
     },
     {
       id: 3,
       title: "Project Management",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur. Tortor felis ipsum senectus etiam venenatis duis leo quam felis. Quisque ornare nunc duis volutpat. maecenas sollicitudin iaculis ut. Felis id fringilla ullamcorper interdum.",
+      description: (
+        <ul className="list text-[2rem] list-disc">
+          <li className="list-item">Agilite</li>
+          <li className="list-item">Scrum</li>
+          <li className="list-item">Cycle V</li>
+        </ul>
+      ),
+    },
+    {
+      id: 4,
+      title: "Business Intelligence",
+      description: (
+        <ul className="list text-[2rem]">
+          <li className="list-item">En apprentissage</li>
+        </ul>
+      ),
     },
   ];
 
@@ -116,6 +142,7 @@ export function ServicesSection() {
           return (
             <div key={item.id} className="gsap-service-card">
               <ServiceCard
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 description={item.description}

@@ -1,8 +1,9 @@
 import { Dot } from "./Dots";
+import React, { ReactNode } from "react";
 
 interface ServiceCardProps {
   title: string;
-  description: string;
+  description: ReactNode;
   className?: string;
   id: number;
 }
@@ -26,7 +27,7 @@ export function ServiceCard({
       {/*Content Grid */}
       <div className="col-span-7 h-full w-full flex flex-col justify-center items-start overflow-hidden p-4 text-start">
         <h1 className="text-[3.80rem]">{title}</h1>
-        <p className="text-[1.5rem]">{description}</p>
+        <div className="text-[1.5rem]">{description}</div>
       </div>
       <div className="block p-6 absolute top-4 right-4 bg-amber-50 rounded-full">
         {id}

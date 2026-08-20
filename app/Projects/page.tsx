@@ -52,11 +52,12 @@ export default function Projects() {
           Return
         </Link>
       </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 place-items-center gap-30">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 place-items-center gap-50 md:gap-30">
         {WebProjects.map((projet) => {
           return (
             <ProjectCard
               key={projet.id}
+              logosrc={projet.logosrc}
               name={projet.name}
               description={projet.description}
               GithubLink={projet.GithubLink}

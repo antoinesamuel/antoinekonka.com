@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://eliazar-portfolio-two.vercel.app/", // Remplace par ton URL finale une fois déployé
+    url: "https://antoinekonka-com.vercel.app/", // Remplace par ton URL finale une fois déployé
     title:
       "KONKA Kokou Antoine Samuel| Développeur Full-Stack Junior basé à lomé",
     description:
@@ -73,9 +73,9 @@ export const metadata: Metadata = {
     siteName: "KONKA Kokou Antoine Samuel",
     images: [
       {
-        url: "https://eliazar-portfolio-two.vercel.app/Images/first.png", // Ajoute une image d'aperçu de 1200x630px dans ton dossier public
+        url: "https://antoinekonka-com.vercel.app/Screenshot.png", // Ajoute une image d'aperçu de 1200x630px dans ton dossier public
         width: 1920,
-        height: 1080,
+        height: 889,
         alt: "KONKA Kokou Antoine Samuel - Développeur Full-Stack Portfolio",
       },
     ],
@@ -86,10 +86,10 @@ export const metadata: Metadata = {
     title: "KONKA Kokou Antoine Samuel | Développeur Full-Stack Junior",
     description:
       "Découvrez mon portfolio et mes réalisations en développement web.",
-    images: ["https://eliazar-portfolio-two.vercel.app/Images/first.png"],
+    images: ["https://antoinekonka-com.vercel.app/Screenshot.png"],
   },
   icons: {
-    icon: "./Philippos.jpg",
+    icon: "./Icons/Philippos.svg",
   },
 };
 
