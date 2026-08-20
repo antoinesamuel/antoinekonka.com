@@ -7,6 +7,8 @@ import gsap from "gsap";
 import EsgisLogo from "@/public/Icons/logo-red.png";
 import image from "@/public/image.jpeg";
 import Background from "../Pages/Background";
+import Magnet from "../_Components/Magnet";
+import ResumeButton from "../_Components/ResumeButton";
 //
 //Import de nos icons
 import BugsBunny from "@/public/Icons/BuckBunny.svg";
@@ -60,35 +62,37 @@ export default function AboutPage() {
       */}
       {/* Contenu principal */}
       <div className="px-6 md:px-12 pt-12">
-        {/* Bouton Retour */}
-        <div className="animate-in mb-12 md:mb-24">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 p-4 px-6 bg-black text-white hover:bg-gray-800 transition-colors rounded-full text-[1rem] font-medium"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+        <div className="w-full flex justify-between items-center">
+          {/* Bouton Retour */}
+          <div className="animate-in mb-12 md:mb-24">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 p-4 px-6 bg-black text-white hover:bg-gray-800 transition-colors rounded-full text-[1rem] font-medium"
             >
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Return
-          </Link>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Return
+            </Link>
+          </div>
+          <ResumeButton />
         </div>
-
         {/* Grille Texte & Image */}
         <div className="grid grid-cols-1 gap-12 lg:gap-24 items-start w-full mx-auto relative">
           {/* COLONNE TEXTE : Formations & Education */}
           {/* order-2 sur mobile (en bas), md:order-1 sur PC (à gauche) */}
-          <div className="animate-in space-y-16 md:space-y-20 flex flex-col justify-between items-start w-full h-full order-2 md:order-1">
+          <div className="animate-in space-y-16 md:space-y-20 w-full">
             {/* Section Formations */}
-            <div className="w-full">
+            <div className="w-full flex flex-col">
               <h3 className="text-[3rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
                 Formations
               </h3>
@@ -98,6 +102,7 @@ export default function AboutPage() {
                     2024 à Aujourd&apos;hui
                   </span>
                 </div>
+                {/**ESGIS */}
                 <div className="md:w-2/3 space-y-3">
                   <h4 className="text-[1.4rem] md:text-[1.8rem] font-bold">
                     Licence Professionnelle en Génie Logiciel
@@ -113,8 +118,8 @@ export default function AboutPage() {
                         <Image
                           src={EsgisLogo}
                           alt="Logo de l'ESGIS"
-                          width={70}
-                          height={45}
+                          width={60}
+                          height={35}
                           className="inline-block w-auto h-auto"
                         />
                       </a>
@@ -126,41 +131,68 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* Section Education */}
-            <div className="w-full">
-              <h3 className="text-[3rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
-                Éducation
-              </h3>
-              <div className="flex flex-col md:flex-row gap-2 md:gap-16 pt-4">
+              {/**Joe Kakone */}
+              <div className="flex flex-col md:flex-row gap-2 md:gap-16 pt-4 mb-5">
                 <div className="md:w-1/3 shrink-0">
                   <span className="text-[1.4rem] md:text-[1.8rem] font-extrabold block">
-                    2021
+                    AOUT 2024 à Aujourd&apos;hui
                   </span>
                 </div>
-                <div className="md:w-2/3 space-y-3">
+                <div className="">
                   <h4 className="text-[1.4rem] md:text-[1.8rem] font-bold">
-                    BAC 2 Série D au LY-AGO (Lycée Agoè-Nyivé)
+                    Bootcamp en Analyse de donnée chez{" "}
+                    <span className="inline-block">
+                      <a
+                        href="https://josephkonkathedataguy.com/#training"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-red-500"
+                      >
+                        @joeKakone
+                      </a>
+                    </span>
                   </h4>
+                  <p className=" text-[1.2rem] md:text-[1.5rem] leading-relaxed text-black">
+                    {""} Collection et transformation de données en insights
+                    pour la prise de decisions stratégiques
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* COLONNE IMAGE */}
-          {/* order-1 sur mobile (en haut), md:order-2 sur PC (à droite) */}
-          {/* md:sticky md:top-32 permet à l'image de suivre le scroll sur PC. h-max est requis pour le sticky dans une grille */}
-          <div className="animate-in w-full hidden h-full flex justify-center md:justify-end md:sticky md:top-32 self-start order-1 md:order-2">
-            <div className="relative w-full aspect-square rounded-sm overflow-hidden bg-gray-200">
-              <Image
-                src={image}
-                alt="Portrait d'antoine KONKA"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 400px"
-              />
+          {/* Section Education */}
+          <div className="w-full">
+            <h3 className="text-[3rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
+              Éducation
+            </h3>
+            <div className="flex flex-col md:flex-row gap-2 md:gap-16 pt-4">
+              <div className="md:w-1/3 shrink-0">
+                <span className="text-[1.4rem] md:text-[1.8rem] font-extrabold block">
+                  2021
+                </span>
+              </div>
+              <div className="md:w-2/3 space-y-3">
+                <h4 className="text-[1.4rem] md:text-[1.8rem] font-bold">
+                  BAC 2 Série D au LY-AGO (Lycée Agoè-Nyivé)
+                </h4>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* COLONNE IMAGE */}
+        {/* order-1 sur mobile (en haut), md:order-2 sur PC (à droite) */}
+        {/* md:sticky md:top-32 permet à l'image de suivre le scroll sur PC. h-max est requis pour le sticky dans une grille */}
+        <div className="animate-in w-full hidden h-full flex justify-center md:justify-end md:sticky md:top-32 self-start order-1 md:order-2">
+          <div className="relative w-full aspect-square rounded-sm overflow-hidden bg-gray-200">
+            <Image
+              src={image}
+              alt="Portrait d'antoine KONKA"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
           </div>
         </div>
       </div>

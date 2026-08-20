@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import StaggeredMenu from "./StaggeredMenu";
 import TransitionLink from "./TransitionLink";
+import ResumeButton from "./ResumeButton";
 
 interface HeaderProps {
   logoSrc?: string | { src: string };
@@ -32,18 +33,8 @@ export default function Header({ logoSrc }: HeaderProps) {
       {/* ========================================== */}
       <header className="hidden md:flex fixed top-0 left-0 w-full z-100 justify-between items-center px-12 py-6 pointer-events-auto">
         {/* Avatar / Logo en haut à gauche avec effet Glass */}
-        <div className="w-14 h-14 rounded-full overflow-hidden border border-white/20 shadow-lg bg-white/5 backdrop-blur-md">
-          {resolvedLogoSrc ? (
-            <Image
-              src={resolvedLogoSrc}
-              alt="Antoine Konka Logo"
-              width={32}
-              height={32}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <div className="w-full h-full bg-white/10" />
-          )}
+        <div className="">
+          <ResumeButton />
         </div>
 
         {/* Navigation Desktop en pilule avec effet Glass prononcé */}
