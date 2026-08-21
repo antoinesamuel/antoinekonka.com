@@ -1,20 +1,42 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
 /*---break---*/
-@custom-variant dark (&:is(.dark *));
+
 @plugin "daisyui";
 @theme {
     --font-nohemi-medium: "Nohemi Medium", sans-serif;
     --font-nohemi-regular: "Nohemi Regular", sans-serif;
     --font-Delight: "Delight", sans-serif;
+    --font-Dm_Sans: "DM Sans ", sans-serif;
 }
 
-::-webkit-scrollbar {
+
+/*
+@utility scrollbar-hidden {
+  *::-webkit-scrollbar {
     display: none;
+  }
 }
+*/
 
 @layer base {
+    /* 1. Cacher la barre pour Chrome, Safari et Opera */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    /* 2. Cacher la barre pour Firefox et Edge + bloquer le scroll horizontal */
+    html,
+    body {
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE / Edge */
+        overflow-x: hidden;
+        /* Empêche le contenu de déborder sur la droite */
+    }
     *,
     *::before,
     *::after {
@@ -26,13 +48,15 @@
         box-sizing: inherit;
         font-size: 62.5%;
         scroll-behavior: smooth;
-    @apply font-sans;
+        background-color: black;
     }
     body {
         font-family: var(--font-nohemi-regular), sans-serif;
         font-size: 1.6rem;
         line-height: 1.5;
-    @apply bg-background text-foreground;
+        width: 100vw;
+        overflow-x: hidden;
+        background-color: black;
     }
     /*Service Card Style*/
     /* From Uiverse.io by Yaya12085 */
@@ -496,8 +520,8 @@
         width: 100%;
         height: 100%;
     }
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
 }
 
@@ -567,8 +591,61 @@
             rotate: 360deg;
         }
     }
+    /*Call To Action Button*/
+    /* From Uiverse.io by uiverse-astronaut */
+    .cairn-btn {
+        --c-ink: #0b0c0e;
+        --c-bone: #f4f1ea;
+        --t-base: 0.18s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 44px;
+        padding: 0 22px;
+        border-radius: 9999px;
+        border: 1px solid var(--c-bone);
+        background-color: var(--c-bone);
+        color: var(--c-ink);
+        position: absolute;
+        font-family: "Inter", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 0;
+        cursor: pointer;
+        white-space: nowrap;
+        user-select: none;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 32px -16px rgba(0, 0, 0, 0.65), 0 2px 6px -2px rgba(0, 0, 0, 0.45);
+        transition: background-color var(--t-base), border-color var(--t-base), transform var(--t-base), box-shadow var(--t-base);
+    }
+    .cairn-btn:hover {
+        background-color: #ffffff;
+        border-color: #ffffff;
+    }
+    .cairn-btn:active {
+        background-color: #ece9e1;
+        border-color: #ece9e1;
+        transform: translateY(1px);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 14px -8px rgba(0, 0, 0, 0.55);
+    }
+    .cairn-btn:focus-visible {
+        outline: 1px solid #a7e0c2;
+        outline-offset: 3px;
+    }
+    .cairn-btn__icon {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        transition: transform var(--t-base);
+    }
+    .cairn-btn:hover .cairn-btn__icon {
+        transform: translateX(3px);
+    }
 }
+
+
 /*---break---*/
+
 @theme inline {
     --font-heading: var(--font-sans);
     --font-sans: var(--font-sans);
@@ -611,7 +688,10 @@
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
 }
+
+
 /*---break---*/
+
 :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -646,7 +726,10 @@
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
 }
+
+
 /*---break---*/
+
 .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);

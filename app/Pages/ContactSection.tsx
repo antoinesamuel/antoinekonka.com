@@ -118,6 +118,7 @@ export default function ContactSection({ avatarSrc }: ContactSectionProps) {
       </div>
       {/* Bouton pour remonter en haut */}
       <button
+        type="button"
         onClick={scrollToTop}
         className="w-12 h-12 rounded-full border border-black backdrop-blur-md flex items-center justify-center hover:bg-white/10 transition-all text-white active:scale-95 mx-auto z-100"
         aria-label="Retour en haut"

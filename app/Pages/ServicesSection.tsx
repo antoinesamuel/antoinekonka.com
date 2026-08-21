@@ -18,47 +18,39 @@ export function ServicesSection() {
   const services = [
     {
       id: 1,
-      title: "Web App",
-      description: (
-        <ul className="list text-[2rem] list-item">
-          <li className="list-item">Analyse avec UML</li>
-          <li className="list-item">Web Animation</li>
-          <li className="list-item">Front-End Dev</li>
-          <li className="list-item">Backend-Dev</li>
-        </ul>
-      ),
+      title: "Backend Developpement",
+      description:
+        "je vous concois des interfaces interactives et agreables avec React js,Next js et Angular.",
     },
     {
       id: 2,
-      title: "Graphic & UI/UX Design",
-      description: (
-        <ul className="list text-[2rem] list-disc">
-          <li className="list-item">Brand Design</li>
-          <li className="list-item">Logo Design</li>
-          <li className="list-item">Logo Design</li>
-          <li className="list-item">UI Design</li>
-        </ul>
-      ),
+      title: "Front End Developpement",
+      description:
+        "Je concois des Applications Robustes et fiables avec Spring Boot, Django.",
     },
     {
       id: 3,
-      title: "Project Management",
-      description: (
-        <ul className="list text-[2rem] list-disc">
-          <li className="list-item">Agilite</li>
-          <li className="list-item">Scrum</li>
-          <li className="list-item">Cycle V</li>
-        </ul>
-      ),
+      title: "Graphic & UI/UX Design",
+      description:
+        "Je concois des Logos,des UI et des Affiches Minimaliste pour vos entreprises.",
     },
     {
       id: 4,
+      title: "Project Management",
+      description:
+        "Vous avez un projet pour l'avenir, j'analyse, étudis et vous crée un plan afin de donner vie à vos projets.",
+    },
+    {
+      id: 5,
       title: "Business Intelligence",
-      description: (
-        <ul className="list text-[2rem]">
-          <li className="list-item">En apprentissage</li>
-        </ul>
-      ),
+      description:
+        "Je Collecte, Analyse et transforme vos données en insights stratégiques pour la prise de decisions.",
+    },
+    {
+      id: 6,
+      title: "Data Engineering",
+      description:
+        "Je conçois et orchestre des pipelines ETL/ELT hautement performants et des architectures d'entrepôts de données évolutives.",
     },
   ];
 
@@ -128,7 +120,7 @@ export function ServicesSection() {
         className="text-[4.5rem] tracking-tight max-w-4xl mb-16 leading-tight text-white"
       >
         My Job ? Understand, Analyse, design aesthetic, and acessibles solutions
-        to my clients
+        to my clients.
       </h2>
 
       {/* Sous-titre */}
@@ -137,7 +129,7 @@ export function ServicesSection() {
       </h1>
 
       {/* Grille des 3 cartes */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((item) => {
           return (
             <div key={item.id} className="gsap-service-card">

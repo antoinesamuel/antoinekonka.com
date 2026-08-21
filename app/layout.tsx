@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "lenis/dist/lenis.css";
-import { Geist } from "next/font/google";
+import { Geist, DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const mdSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-Dm-Sans",
+  weight: "100",
+});
 
 // Charger les polices locales depuis public/Fonts
 const nohemi = localFont({
@@ -110,6 +115,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         Delight.variable,
         "font-sans",
         geist.variable,
+        mdSans.variable,
       )}
     >
       <body className="min-h-full flex flex-col">{children}</body>

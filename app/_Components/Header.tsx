@@ -31,7 +31,7 @@ export default function Header({ logoSrc }: HeaderProps) {
   return (
     <>
       {/* ========================================== */}
-      <header className="hidden md:flex fixed top-0 left-0 w-full z-100 justify-between items-center px-12 py-6 pointer-events-auto">
+      <header className="hidden md:flex fixed top-0 left-0 w-full z-100 md:justify-between items-center px-12 py-6 pointer-events-auto">
         {/* Avatar / Logo en haut à gauche avec effet Glass */}
         <div className="">
           <ResumeButton />

@@ -15,7 +15,7 @@ import Stewie from "@/public/Icons/Stewie.svg";
 import TortueGeniale from "@/public/Icons/TortueGeniale.svg";
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col justify-center gap-5 items-center p-12 z-10 relative">
+    <div className="min-h-screen flex flex-col justify-center gap-5 items-center p-12 z-10 relative bg-white">
       {/** 
       <Background
         images={[

@@ -43,7 +43,7 @@ export default function AboutPage() {
     <main
       ref={containerRef}
       // Remplacement de overflow-hidden par overflow-x-hidden pour permettre le scroll sticky
-      className="min-h-screen text-black font-nohemi-regular z-10 relative flex flex-col justify-between overflow-x-hidden"
+      className="min-h-screen font-nohemi-regular z-10 relative flex flex-col justify-between overflow-x-hidden bg-white"
     >
       {/** 
       <Background
@@ -61,7 +61,7 @@ export default function AboutPage() {
       />
       */}
       {/* Contenu principal */}
-      <div className="px-6 md:px-12 pt-12">
+      <div className="px-6 md:px-12 pt-12 bg-white">
         <div className="w-full flex justify-between items-center">
           {/* Bouton Retour */}
           <div className="animate-in mb-12 md:mb-24">
