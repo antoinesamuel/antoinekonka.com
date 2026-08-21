@@ -117,7 +117,7 @@ export function ServicesSection() {
       {/* Titre principal */}
       <h2
         ref={h2Ref}
-        className="text-[4.5rem] tracking-tight max-w-4xl mb-16 leading-tight text-white"
+        className="text-[4.5rem] xl:text-[6.5rem] tracking-tight max-w-4xl xl:max-w-6xl mb-16 leading-tight text-white"
       >
         My Job ? Understand, Analyse, design aesthetic, and acessibles solutions
         to my clients.

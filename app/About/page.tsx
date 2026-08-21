@@ -93,7 +93,7 @@ export default function AboutPage() {
           <div className="animate-in space-y-16 md:space-y-20 w-full">
             {/* Section Formations */}
             <div className="w-full flex flex-col">
-              <h3 className="text-[3rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
+              <h3 className="text-[3rem] xl:text-[5rem] font-black mb-6 md:mb-8 border-b-2 border-black pb-4 tracking-tight">
                 Formations
               </h3>
               <div className="flex flex-col md:flex-row gap-2 md:gap-16 pt-4 mb-5">

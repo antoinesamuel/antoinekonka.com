@@ -1,7 +1,11 @@
 import Link from "next/link";
 export function CallToActionButton() {
   return (
-    <a href="#Contacts" className="cairn-btn z-100 md:hidden" type="button">
+    <a
+      href="#Contacts"
+      className="cairn-btn z-100 md:hidden mt-12"
+      type="button"
+    >
       Contacter Moi
       <svg
         viewBox="0 0 24 24"
