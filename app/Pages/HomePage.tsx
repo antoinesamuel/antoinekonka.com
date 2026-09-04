@@ -6,12 +6,12 @@ export default function HomePage() {
       <FixedRotateText />
       {/* Contenu textuel central inspiré de ton design Figma */}
       <div className="h-full z-10 text-center pointer-events-none select-none flex flex-col items-center justify-center gap-4">
-        <h1 className="text-white font-bold text-[8rem] md:text-[12rem] lg:text-[14rem] tracking-tight leading-none">
+        <h1 className="text-white font-bold text-[8rem] md:text-[12rem] lg:text-[14rem] xl:text-[16rem] tracking-tight leading-none">
           Ciao, i{"'"}m
           <br />
           antoine
         </h1>
-        <p className="text-white/80 font-medium text-lg md:text-xl mt-4 tracking-wide">
+        <p className="text-white/80 font-medium text-lg md:text-xl xl:text-[2rem] mt-4 tracking-wide">
           A junior FullStack dev
         </p>
         <div className="w-full flex justify-center items-center md:hidden">

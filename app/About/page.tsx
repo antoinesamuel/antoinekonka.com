@@ -61,7 +61,7 @@ export default function AboutPage() {
       />
       */}
       {/* Contenu principal */}
-      <div className="px-6 md:px-12 pt-12 bg-white">
+      <div className="px-6 md:px-12 pt-12 bg-white text-black">
         <div className="w-full flex justify-between items-center">
           {/* Bouton Retour */}
           <div className="animate-in mb-12 md:mb-24">
@@ -148,7 +148,7 @@ export default function AboutPage() {
                         rel="noopener noreferrer"
                         className="text-red-500"
                       >
-                        @joeKakone
+                        @Algo jungle
                       </a>
                     </span>
                   </h4>

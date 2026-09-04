@@ -41,19 +41,19 @@ export default function Header({ logoSrc }: HeaderProps) {
         <nav className="flex items-center space-x-1 px-6 py-4 rounded-full border border-white/15 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
           <TransitionLink
             href="/About"
-            className="px-5 py-2 text-white/80 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
+            className="px-5 py-2 text-blue-400 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
           >
             About
           </TransitionLink>
           <TransitionLink
             href="/Projects"
-            className="px-5 py-2 text-white/80 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
+            className="px-5 py-2 text-blue-400 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
           >
             Projects
           </TransitionLink>
           <a
             href="#Contacts"
-            className="px-5 py-2 text-white/80 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
+            className="px-5 py-2 text-blue-400 hover:text-amber-50 transition-colors text-[1.75rem] font-medium rounded-full"
           >
             Contacts
           </a>

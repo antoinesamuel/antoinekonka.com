@@ -62,4 +62,15 @@ export const WebProjects = [
     RealLink: "",
     FigmaTemplateLink: "",
   },
+  {
+    id: 7,
+    logosrc: "https://miabe-assime.vercel.app/assets/Logo-av3mY3aN.jpeg",
+    name: "Maiab'Assime",
+    description:
+      "La plateforme de référence reliant agriculteurs, commerçants et transporteurs en Afrique de l'Ouest. developpe par AgriCom Bridge",
+    GithubLink: "https://github.com/antoinesamuel/MiabeAssime",
+    RealLink: "https://miabe-assime.vercel.app/",
+    FigmaTemplateLink:
+      "https://www.figma.com/design/gPKxpaz9QqTHR2U11hXY77/TechNovara?node-id=87-97&t=lXMD67lcM1LA5dpt-1",
+  },
 ];

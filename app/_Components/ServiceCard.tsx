@@ -27,9 +27,9 @@ export function ServiceCard({
         <div className="w-full h-1/3 flex justify-center items-end text-blue-400">
           <h1 className="text-5xl ">{id}</h1>
         </div>
-        <div className="w-full h-2/3 flex flex-col justify-start items-center text-center">
-          <h1 className="text-[3rem] md:text-[3.80rem]">{title}</h1>
-          <p className="text-[1.5rem] font-sans">{description}</p>
+        <div className="w-full h-2/3 flex flex-col justify-start items-center text-center text-black">
+          <h1 className="text-[3rem] md:text-[3.80rem] text-black">{title}</h1>
+          <p className="text-[1.5rem] font-sans text-black">{description}</p>
         </div>
       </div>
     </div>
