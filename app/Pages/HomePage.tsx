@@ -12,7 +12,7 @@ export default function HomePage() {
           antoine
         </h1>
         <p className="text-white/80 font-medium text-lg md:text-xl xl:text-[2rem] mt-4 tracking-wide">
-          Junior FullStack dev based in Lomé, Togo.
+          Junior FullStack dev based in Lomé,Togo 🇹🇬.
         </p>
       </div>
     </div>
