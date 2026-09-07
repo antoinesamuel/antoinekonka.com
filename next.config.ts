@@ -5,9 +5,15 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "miabe-assime.vercel.app",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "eliazar-portfolio-two.vercel.app",
         port: "",
-        pathname: "/**", // Autorise tous les chemins d'images sur ce domaine
+        pathname: "/**",
       },
     ],
   },
