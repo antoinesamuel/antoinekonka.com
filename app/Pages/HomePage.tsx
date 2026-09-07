@@ -14,9 +14,6 @@ export default function HomePage() {
         <p className="text-white/80 font-medium text-lg md:text-xl xl:text-[2rem] mt-4 tracking-wide">
           A junior FullStack dev
         </p>
-        <div className="w-full flex justify-center items-center md:hidden">
-          <CallToActionButton />
-        </div>
       </div>
     </div>
   );

@@ -36,7 +36,6 @@ export function FixedRotateText() {
 
       <div className="button__circle">
         <div className="button__icon">🤭</div>
-
         <div className="button__icon button__icon--copy">😎</div>
       </div>
     </button>
