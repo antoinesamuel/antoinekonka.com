@@ -20,32 +20,69 @@ import ServicesSection from "./Pages/ServicesSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isVideoActive, setIsVideoActive] = useState(true);
+  function handleVideoEnd() {
+    setIsVideoActive(false);
+    let SkipButton = document.getElementById("hero-login-btn");
+    let HeroVideoContainer = document.getElementById("hero-video-container");
+    let MainContent = document.getElementById("main-content");
+    HeroVideoContainer?.classList.add("hidden");
+    MainContent?.classList.remove("hidden");
+    MainContent?.classList.add("flex");
+  }
   return (
     <div className="z-10">
       {/* Affichage du loader */}
       {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
       {/* Contenu de la page principale */}
-      <div className="w-full flex flex-col items-center justify-center z-10 relative">
-        {/* Header positionné en haut par-dessus la scène */}
-        <div className="">
-          <Header logoSrc={Philippos} />
-          <HomePage />
-          <ServicesSection />
-          <ContactSection />
+      <div className="">
+        <div
+          className="w-screen h-screen absolute top-0 left-0 z-1 p-4"
+          id="hero-video-container"
+        >
+          <video
+            src="VideoDePresentation.mp4"
+            className="h-full w-full inset-0 object-cover rounded-4xl"
+            autoPlay
+            muted
+            loop
+            controls
+          ></video>
+          <button
+            className="bg-red-500 text-white rounded-full p-4 cursor-pointer absolute top-8 right-8 sm:top-12 sm:right-12"
+            id="hero-login-btn"
+            onClick={handleVideoEnd}
+          >
+            <span>Skip the Video</span>
+          </button>
         </div>
-        <Background
-          images={[
-            BugsBunny,
-            CoolBob,
-            DuffyDuck,
-            GangBob,
-            Philippos,
-            philipposBrother,
-            Stewie,
-            TortueGeniale,
-            CoolGuy,
-          ]}
-        />
+        <div
+          className="hidden w-full flex-col items-center justify-center z-10 relative"
+          id="main-content"
+        >
+          <div className="">
+            {/* Header positionné en haut par-dessus la scène */}
+            <div className="">
+              <Header logoSrc={Philippos} />
+              <HomePage />
+              <ServicesSection />
+              <ContactSection />
+            </div>
+            <Background
+              images={[
+                BugsBunny,
+                CoolBob,
+                DuffyDuck,
+                GangBob,
+                Philippos,
+                philipposBrother,
+                Stewie,
+                TortueGeniale,
+                CoolGuy,
+              ]}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

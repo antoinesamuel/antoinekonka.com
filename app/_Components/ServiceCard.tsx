@@ -15,7 +15,7 @@ export function ServiceCard({
   id,
 }: ServiceCardProps) {
   return (
-    <div className={`py-0 serviceCard grid-cols-8 relative`}>
+    <div className={`h-lg serviceCard grid-cols-8 relative`}>
       {/*Dots Grid */}
       <div className="hidden col-span-1 h-full w-full md:flex flex-col justify-around items-center border-r border-red-500">
         <Dot />

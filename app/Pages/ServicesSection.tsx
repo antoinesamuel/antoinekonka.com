@@ -18,13 +18,13 @@ export function ServicesSection() {
   const services = [
     {
       id: 1,
-      title: "Backend Developpement",
+      title: "Front End Developpement",
       description:
         "je vous concois des interfaces interactives et agreables avec React js,Next js et Angular.",
     },
     {
       id: 2,
-      title: "Front End Developpement",
+      title: "Backend Developpement",
       description:
         "Je concois des Applications Robustes et fiables avec Spring Boot, Django.",
     },
