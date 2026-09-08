@@ -196,7 +196,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="h-screen w-full flex justify-center items-centerp-6 md:p-12">
+      <div className="h-screen w-full flex justify-center items-center p-6 md:p-12">
         <video
           src="../VideoDePresentation.mp4"
           controls
