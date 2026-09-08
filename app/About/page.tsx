@@ -196,6 +196,14 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <div className="h-screen w-full flex justify-center items-centerp-6 md:p-12">
+        <video
+          src="../VideoDePresentation.mp4"
+          controls
+          muted
+          className="h-full w-full object-cover rounded-4xl"
+        ></video>
+      </div>
 
       {/* Typographie Géante en bas */}
       <div className="animate-in w-full flex justify-center items-end px-4 md:px-6 pb-6 mt-16 md:mt-20">
